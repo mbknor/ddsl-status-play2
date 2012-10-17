@@ -3,9 +3,12 @@ This is a web applications showing all online Services in [DDSL](https://github.
 It is a [Play Framework 2.0](http://www.playframework.org/) application
 
 
-You can start it like a regular play app or download it and start it like this:
+You can start it like a regular play app or download [ddsl-status-play2-1.0.zip](https://github.com/downloads/mbknor/ddsl-status-play2/ddsl-status-play2-1.0.zip) and start it like this:
 
-    ...
+    unzip ddsl-status-play2-1.0.zip
+    cd ddsl-status-play2-1.0
+    chmod u+x start
+    ./start
 
 The point your browser to
 
