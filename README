@@ -1,4 +1,15 @@
-This is your new Play 2.0 application
-=====================================
+This is a web applications showing all online Services in [DDSL](https://github.com/mbknor/ddsl)
 
-This file will be packaged with your application, when using `play dist`.
+It is a [Play Framework 2.0](http://www.playframework.org/) application
+
+
+You can start it like a regular play app or download it and start it like this:
+
+    ...
+
+The point your browser to
+
+	http://localhost:9000/
+	
+
+	
