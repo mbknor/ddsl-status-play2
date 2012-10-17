@@ -1,0 +1,55 @@
+@(services: List[_root_.controllers.Application.ServiceInfo])
+
+@main("DDSL Status") {
+
+Showing all online services in DDSL network:
+<table class="onlineServices">
+    <tr>
+        <th>Environment</th>
+        <th>Service-type</th>
+        <th>Service-name</th>
+        <th>Version</th>
+        <th>Available locations</th>
+    </tr>
+@for(s <- services){
+    <tr>
+        <td>
+        @s.env
+        </td>
+        <td>
+        @s.serviceType
+        </td>
+        <td>
+            <b>
+            @s.name
+            </b>
+        </td>
+        <td>
+        @s.version
+        </td>
+        <td>
+            <table border="1">
+                <tr>
+                    <th>location-url</th>
+                    <th>quality</th>
+                    <th>last updated</th>
+                    <th>server ip</th>
+
+                </tr>
+                @for(l <- s.locations){
+                    <tr>
+                        <td>@l.url</td>
+                        <td>@l.quality</td>
+                        <td>@l.lastUpdated</td>
+                        <td>@l.ip</td>
+                    </tr>
+                }
+            </table>
+        </td>
+    </tr>
+}
+</table>
+
+
+    
+}
