@@ -1,18 +1,18 @@
 import sbt._
 import Keys._
-import PlayProject._
+import play.Project._
 
 object ApplicationBuild extends Build {
 
     val appName         = "ddsl-status-play2"
-    val appVersion      = "1.1"
+    val appVersion      = "1.2"
 
     val appDependencies = Seq(
-      	// Add your project dependencies here,
-      	"com.kjetland" %% "ddsl-play2" % "1.1"
+      	"play"         %% "play-java"  % "2.1.0",
+      	"com.kjetland" %% "ddsl-play2" % "1.2"
     )
 
-    val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
+    val main = play.Project(appName, appVersion, appDependencies).settings(
     	// Add your own project settings here 
 		resolvers ++= Seq(
           Resolver.file("Local ivy Repository", file(Path.userHome+"/.ivy2/local/"))(Resolver.ivyStylePatterns),
