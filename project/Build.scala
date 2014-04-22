@@ -5,11 +5,11 @@ import play.Project._
 object ApplicationBuild extends Build {
 
     val appName         = "ddsl-status-play2"
-    val appVersion      = "1.2"
+    val appVersion      = "1.3"
 
     val appDependencies = Seq(
-      	"play"         %% "play-java"  % "2.1.0",
-      	"com.kjetland" %% "ddsl-play2" % "1.2"
+      	"com.typesafe.play"    %% "play-java"  % "2.2.2",
+      	"com.kjetland"         %% "ddsl-play2" % "1.3"
     )
 
     val main = play.Project(appName, appVersion, appDependencies).settings(
